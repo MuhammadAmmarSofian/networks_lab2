@@ -18,23 +18,29 @@ API will be available at: http://127.0.0.1:8000
 
 ### GET Requests
 
+
 Get all menu items:
 
 GET /menu
+
 
 Get menu items sorted by price:
 
 GET /menu?sortBy=price
 
+
 Get top 3 menu items:
 
 GET /menu?count=3
+
 
 Get a single menu item by ID:
 
 GET /menu/{item_id}
 
+
 ### POST Requests
+
 
 Add a new menu item:
 
@@ -46,7 +52,9 @@ POST /menu
     "category": "Burger"
 }
 
+
 ### PUT Requests
+
 
 Update a menu item:
 
@@ -58,6 +66,7 @@ PUT /menu/{item_id}
     "category": "Burger"
 }
 
+
 Batch update prices:
 
 PUT /menu/batch_update
@@ -65,6 +74,7 @@ PUT /menu/batch_update
     "category": "Burger",
     "price_change_percent": 10
 }
+
 
 ### DELETE Requests
 
@@ -93,6 +103,7 @@ DELETE /menu/{item_id} → If the item exists, it is deleted; if repeated, it re
 DELETE /menu/batch_delete → Deleting items by condition will always return the same response if repeated.
 
 PUT /menu/{item_id} → Updating an item with the same data multiple times has no extra effect.
+
 
 ### Non-Idempotent Routes
 
