@@ -1,0 +1,255 @@
+{
+    "info": {
+        "_postman_id": "fake-food-delivery-api",
+        "name": "Fake Food Delivery API - McDonald's",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "GET All Menu Items",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/menu",
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "menu"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "GET Menu Items Sorted by Price",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/menu?sortBy=price",
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "menu"
+                    ],
+                    "query": [
+                        {
+                            "key": "sortBy",
+                            "value": "price"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "GET Menu Items Sorted by Category",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/menu?sortBy=category",
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "menu"
+                    ],
+                    "query": [
+                        {
+                            "key": "sortBy",
+                            "value": "category"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "GET Single Menu Item",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/menu/1",
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "menu",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "POST Add New Menu Item",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"item_id\": \"7\",\n    \"name\": \"Big Mac\",\n    \"price\": 5.99,\n    \"category\": \"Burger\"\n}"
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:8000/menu",
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "menu"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "PUT Update Menu Item",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"item_id\": \"1\",\n    \"name\": \"Cheeseburger Deluxe\",\n    \"price\": 3.49,\n    \"category\": \"Burger\"\n}"
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:8000/menu/1",
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "menu",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "DELETE Menu Item",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/menu/7",
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "menu",
+                        "7"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "POST Upload Menu Item Image",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "multipart/form-data"
+                    }
+                ],
+                "body": {
+                    "mode": "formdata",
+                    "formdata": [
+                        {
+                            "key": "file",
+                            "type": "file",
+                            "src": "menu_item.png"
+                        },
+                        {
+                            "key": "item_id",
+                            "value": "1",
+                            "type": "text"
+                        }
+                    ]
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:8000/upload_menu_image",
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "upload_menu_image"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "GET Retrieve Menu Item Image",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/menu_image/1",
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "menu_image",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}

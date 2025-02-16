@@ -1,0 +1,129 @@
+{
+    "info": {
+        "_postman_id": "fake-food-delivery-api",
+        "name": "Networks Lab McDonald's",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Get All Menu Items",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://127.0.0.1:8000/menu",
+                    "protocol": "http",
+                    "host": ["127", "0", "0", "1"],
+                    "port": "8000",
+                    "path": ["menu"]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get Single Menu Item",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://127.0.0.1:8000/menu/1",
+                    "protocol": "http",
+                    "host": ["127", "0", "0", "1"],
+                    "port": "8000",
+                    "path": ["menu", "1"]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Add New Menu Item",
+            "request": {
+                "method": "POST",
+                "header": [{"key": "Content-Type", "value": "application/json"}],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"item_id\": \"3\", \"name\": \"Big Mac\", \"price\": 5.99, \"category\": \"Burger\"}"
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:8000/menu",
+                    "protocol": "http",
+                    "host": ["127", "0", "0", "1"],
+                    "port": "8000",
+                    "path": ["menu"]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Update Menu Item",
+            "request": {
+                "method": "PUT",
+                "header": [{"key": "Content-Type", "value": "application/json"}],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"name\": \"Large Cheeseburger\", \"price\": 3.49, \"category\": \"Burger\"}"
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:8000/menu/1",
+                    "protocol": "http",
+                    "host": ["127", "0", "0", "1"],
+                    "port": "8000",
+                    "path": ["menu", "1"]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Delete Menu Item",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "http://127.0.0.1:8000/menu/2",
+                    "protocol": "http",
+                    "host": ["127", "0", "0", "1"],
+                    "port": "8000",
+                    "path": ["menu", "2"]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Upload Menu Image",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "formdata",
+                    "formdata": [
+                        {"key": "file", "type": "file", "src": ""},
+                        {"key": "item_id", "type": "text", "value": "1"}
+                    ]
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:8000/upload_menu_image",
+                    "protocol": "http",
+                    "host": ["127", "0", "0", "1"],
+                    "port": "8000",
+                    "path": ["upload_menu_image"]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Retrieve Menu Image",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://127.0.0.1:8000/menu_image/1",
+                    "protocol": "http",
+                    "host": ["127", "0", "0", "1"],
+                    "port": "8000",
+                    "path": ["menu_image", "1"]
+                }
+            },
+            "response": []
+        }
+    ]
+}
