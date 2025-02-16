@@ -1,7 +1,7 @@
 {
     "info": {
-        "_postman_id": "fake-food-delivery-api",
-        "name": "Fake Food Delivery API - McDonald's",
+        "_postman_id": "Networks_Lab_2-api",
+        "name": "Networks Lab 2 - Fake McDonald",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
     },
     "item": [

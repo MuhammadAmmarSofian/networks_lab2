@@ -1,4 +1,4 @@
-# Fake Food Delivery API - McDonald's Clone
+# Networks Lab 2 - Fake McDonalds
 
 ## Description
 
@@ -13,6 +13,8 @@ $ git clone https://github.com/MuhammadAmmarSofian/networks_lab2
 $ docker compose up --build
 
 API will be available at: http://127.0.0.1:8000
+
+For testing, import the postman_collection.json that is in the file into Postman and can be used to test the API after running docker compose.
 
 ## API Endpoints & Examples
 
@@ -384,5 +386,3 @@ These routes modify the state and return different results on repeated calls:
 POST /menu → Creating a new item multiple times adds duplicates.
 
 PUT /menu/batch_update → Increases prices each time it is called.
-
-
