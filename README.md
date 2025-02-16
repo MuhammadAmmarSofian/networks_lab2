@@ -1,47 +1,22 @@
-Fake Food Delivery API - McDonald's Clone
+# Fake Food Delivery API - McDonald's Clone
 
-Description
+## Description
 
 This project is a REST API for a fake food delivery system using FastAPI. It allows managing a menu for a single restaurant (McDonald's) and includes endpoints for creating, retrieving, updating, and deleting menu items. The API also supports image uploads, sorting, filtering, and batch operations.
 
-🚀 Setup Instructions
+## Setup Instructions
 
-1️⃣ Prerequisites
+Clone the Repository
 
-Install Python 3.11+
-
-Install Docker & Docker Compose
-
-Install Postman for API testing (optional)
-
-2️⃣ Clone the Repository
-
-$ git clone https://github.com/your-repository/fake-food-delivery-api.git
-$ cd fake-food-delivery-api
-
-3️⃣ Install Dependencies
-
-If running locally:
-
-$ pip install -r requirements.txt
-
-4️⃣ Run the API
-
-✅ Option 1: Using FastAPI Directly
-
-$ uvicorn main:app --reload
-
-API will be available at: http://127.0.0.1:8000
-
-✅ Option 2: Using Docker
+$ git clone https://github.com/MuhammadAmmarSofian/networks_lab2
 
 $ docker compose up --build
 
 API will be available at: http://127.0.0.1:8000
 
-🔥 API Endpoints & Examples
+## API Endpoints & Examples
 
-1️⃣ GET Requests
+### GET Requests
 
 Get all menu items:
 
@@ -59,7 +34,7 @@ Get a single menu item by ID:
 
 GET /menu/{item_id}
 
-2️⃣ POST Requests
+### POST Requests
 
 Add a new menu item:
 
@@ -71,7 +46,7 @@ POST /menu
     "category": "Burger"
 }
 
-3️⃣ PUT Requests
+### PUT Requests
 
 Update a menu item:
 
@@ -91,7 +66,7 @@ PUT /menu/batch_update
     "price_change_percent": 10
 }
 
-4️⃣ DELETE Requests
+### DELETE Requests
 
 Delete a single menu item:
 
@@ -101,9 +76,11 @@ Batch delete items by category:
 
 DELETE /menu/batch_delete?category=Burger
 
-🔄 Idempotency Analysis
 
-✅ Idempotent Routes
+
+## Idempotency Analysis
+
+### Idempotent Routes:
 
 These routes return the same response when called multiple times with the same input:
 
@@ -117,7 +94,7 @@ DELETE /menu/batch_delete → Deleting items by condition will always return the
 
 PUT /menu/{item_id} → Updating an item with the same data multiple times has no extra effect.
 
-⚠️ Non-Idempotent Routes
+### Non-Idempotent Routes
 
 These routes modify the state and return different results on repeated calls:
 
